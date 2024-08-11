@@ -97,7 +97,7 @@ def train(opt):
 
     seg_mode = MULTILABEL_MODE if params.seg_multilabel else MULTICLASS_MODE if len(params.seg_list) > 1 else BINARY_MODE
 
-    train_dataset = BddDataset(
+    train_dataset = CustomDataset(
         params=params,
         is_train=True,
         inputsize=params.model['image_size'],
@@ -120,7 +120,7 @@ def train(opt):
         collate_fn=BddDataset.collate_fn
     )
 
-    valid_dataset = BddDataset(
+    valid_dataset = CustomDataset(
         params=params,
         is_train=False,
         inputsize=params.model['image_size'],
