@@ -120,7 +120,7 @@ def train(opt):
         collate_fn=BddDataset.collate_fn
     )
 
-    valid_dataset = CustomDataset(
+    valid_dataset = BddDataset(
         params=params,
         is_train=False,
         inputsize=params.model['image_size'],
