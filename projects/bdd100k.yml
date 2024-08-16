@@ -29,12 +29,12 @@ seg_list: ['road','lane']
 seg_multilabel: false  # a pixel can belong to multiple labels (i.e. lane line + underlying road)
 
 dataset:
-  dataroot: /kaggle/input/motor-indo/imgs
-  labelroot: /kaggle/input/motor-indo/det_annot
+  dataroot: /kaggle/input/motor-indo/fix-motor-dataset/imgs
+  labelroot: /kaggle/input/motor-indo/fix-motor-dataset/det_annot
   segroot:
   # must be in correct order with seg_list
   - /kaggle/input/d/kidzey/motor-datasets/datasetmotor/da_seg_annot
-  - /kaggle/input/d/kidzey/motor-datasets/datasetmotor/ll_seg_annot
+  - /kaggle/input/motor-indo/fix-motor-dataset/ll_seg_annot
   test_set: val
   train_set: train
   org_img_size:
